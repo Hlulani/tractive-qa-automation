@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+screenshots
+test-results
+/test-results/
+/playwright-report/
+/allure-report/
+/allure-results/
