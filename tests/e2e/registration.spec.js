@@ -3,7 +3,7 @@ import { expect } from "@playwright/test";
 import { RegistrationPage } from "../../pages/registration.page.js";
 import { faker } from "@faker-js/faker";
 
-//dotenv.config();
+
 test.describe("Registration Form Tests", () => {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
