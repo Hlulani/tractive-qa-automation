@@ -22,7 +22,7 @@ const test = baseTest.extend({
     // Navigate to the base URL
     await page.goto(baseURL);
 
-    // Improved handling for cookie consent popup
+    
     const acceptCookiesButton = page.locator(".js-cookie-consent-accept");
 
     // Retry clicking the accept button if it appears
