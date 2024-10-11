@@ -2,13 +2,14 @@ import { test } from "../../fixtures/fixtures.js";
 import { expect } from "@playwright/test";
 import { RegistrationPage } from "../../pages/registration.page.js";
 import { faker } from "@faker-js/faker";
+import { getRandomEmail } from "../../utils/emailHelper.js"; 
 
 //dotenv.config();
 test.describe("Registration Form Tests", () => {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
   const password = faker.internet.password(12, true);
-  const email = `${firstName}@icloud.com`;
+  const email = getRandomEmail();
 
   test("should redirect to the signup page after clicking \"Create Account\"", async ({
     page,
