@@ -12,7 +12,8 @@
     "test:reporter:json": "npx playwright test  --browser=firefox --headed --reporter=json",
     "test:reporter:allure": "npx playwright test  --browser=firefox --headed --reporter=allure-playwright",
     "test:allure:generate": "allure generate ./allure-results -o ./allure-report",
-    "test:allure:open": "allure open ./allure-report"
+    "test:allure:open": "allure open ./allure-report",
+    "lint": "eslint '**/*.js'"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.48.0",
-    "allure-playwright": "^3.0.4"
+    "allure-playwright": "^3.0.4",
+    "eslint": "^9.12.0"
   }
 }

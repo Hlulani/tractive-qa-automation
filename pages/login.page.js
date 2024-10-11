@@ -3,16 +3,16 @@ import { expect } from "@playwright/test";
 export class LoginPage {
   constructor(page) {
     this.page = page;
-    this.emailInput = page.locator('input[type="email"]');
-    this.passwordInput = page.locator('input[type="password"]');
+    this.emailInput = page.locator("input[type=\"email\"]");
+    this.passwordInput = page.locator("input[type=\"password\"]");
     this.signInButton = page.locator("button.tcommon-button--cta");
     this.appleSignInButton = page.locator(
-      'button:has-text("Sign in with Apple")'
+      "button:has-text(\"Sign in with Apple\")"
     );
     this.googleIframe = page.frameLocator(
-      'iframe[title="Schaltfläche „Über Google anmelden“"]'
+      "iframe[title=\"Schaltfläche „Über Google anmelden“\"]"
     );
-    this.forgotPasswordLink = page.locator('a:has-text("Forgot password?")');
+    this.forgotPasswordLink = page.locator("a:has-text(\"Forgot password?\")");
     this.emailFieldLine = page.locator("div.tcommon-form-field__line").nth(0);
   }
 
@@ -55,7 +55,7 @@ export class LoginPage {
   }
 
   async isSignInButtonDisabled() {
-    const button = await this.page.$('tcommon-button[type="submit"]');
+    const button = await this.page.$("tcommon-button[type=\"submit\"]");
     return (await button.getAttribute("disabled")) === "disabled";
   }
 }
