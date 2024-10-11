@@ -35,13 +35,6 @@ This project uses Playwright for automated testing along with Allure for generat
    npm install
    ```
 
-### Environment Variables
-
-To set up environment variables, you can create a `.env` file in the project root. Here’s an example of what the `.env` file could look like:
-
-```env
-BASE_URL="https://my-stage.tractive.com"
-```
 
 ### Running Tests
 
@@ -145,7 +138,14 @@ Key configurations:
 
 ### Running Tests in CI
 
-The `workers` setting dynamically adjusts for CI environments, and Allure reporting can be integrated into CI/CD pipelines for detailed test results and history.
+### CI/CD Pipeline
+
+This project has Git Workflow installed for automated test execution in a continuous integration/continuous deployment (CI/CD) pipeline.
+
+I have added a JSON file containing a list of emails that are acceptable by the system for registration tests. If a job fails during the registration happy path test, it is recommended to re-run the job to ensure that a previously used email is not being used again.
+
+Please note, since this project is for an interview, I acknowledge that in a real-world scenario, we would likely use test users that could potentially be whitelisted, avoiding such issues.
+
 
 ### Project Structure
 
