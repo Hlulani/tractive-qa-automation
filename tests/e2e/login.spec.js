@@ -20,7 +20,7 @@ test.describe("Login Tests", () => {
     await loginPage.checkEmailFieldLineCSS("rgb(203, 63, 55)");
   });
 
-  test('should click the "Sign in with Apple" button', async ({ page }) => {
+  test("should click the \"Sign in with Apple\" button", async ({ page }) => {
     const loginPage = new LoginPage(page);
     const newPage = await loginPage.clickAppleSignIn();
 
@@ -29,7 +29,7 @@ test.describe("Login Tests", () => {
     );
   });
 
-  test.skip('should click the "Sign in with Google" button', async ({
+  test.skip("should click the \"Sign in with Google\" button", async ({
     page,
   }) => {
     const loginPage = new LoginPage(page);
@@ -43,7 +43,7 @@ test.describe("Login Tests", () => {
     );
   });
 
-  test('should redirect to forgot password page when clicking "Forgot password?"', async ({
+  test("should redirect to forgot password page when clicking \"Forgot password?\"", async ({
     page,
   }) => {
     const loginPage = new LoginPage(page);

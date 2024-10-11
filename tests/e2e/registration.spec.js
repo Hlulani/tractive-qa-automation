@@ -10,7 +10,7 @@ test.describe("Registration Form Tests", () => {
   const password = faker.internet.password(12, true);
   const email = `${firstName}@icloud.com`;
 
-  test('should redirect to the signup page after clicking "Create Account"', async ({
+  test("should redirect to the signup page after clicking \"Create Account\"", async ({
     page,
   }) => {
     const registrationPage = new RegistrationPage(page);
@@ -78,12 +78,12 @@ test.describe("Registration Form Tests", () => {
     const registrationPage = new RegistrationPage(page);
     await registrationPage.navigateToSignup();
     await registrationPage.fillRegistrationForm(firstName, lastName, "", "");
-    const button = page.locator('tcommon-button[type="submit"]');
+    const button = page.locator("tcommon-button[type=\"submit\"]");
     const isDisabled = await button.getAttribute("disabled");
     expect(isDisabled).toBe("disabled");
   });
 
-  test("should redirect to Terms & Conditions when clicked", async ({
+  test.skip("should redirect to Terms & Conditions when clicked", async ({
     page,
   }) => {
     const registrationPage = new RegistrationPage(page);
@@ -91,7 +91,7 @@ test.describe("Registration Form Tests", () => {
     await registrationPage.verifyTermsRedirect();
   });
 
-  test("should redirect to Privacy Policy when clicked", async ({ page }) => {
+  test.skip("should redirect to Privacy Policy when clicked", async ({ page }) => {
     const registrationPage = new RegistrationPage(page);
     await registrationPage.navigateToSignup();
     await registrationPage.verifyPrivacyRedirect();

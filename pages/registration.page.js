@@ -3,12 +3,12 @@ import { expect } from "@playwright/test";
 export class RegistrationPage {
   constructor(page) {
     this.page = page;
-    this.createAccountLink = page.locator('a[ui-sref="^.signup"]');
-    this.firstNameInput = page.locator('input[name="firstName"]');
-    this.lastNameInput = page.locator('input[name="lastName"]');
-    this.emailInput = page.locator('input[name="email"]');
-    this.passwordInput = page.locator('input[name="password"]');
-    this.submitButton = page.locator('button[type="submit"]');
+    this.createAccountLink = page.locator("a[ui-sref=\"^.signup\"]");
+    this.firstNameInput = page.locator("input[name=\"firstName\"]");
+    this.lastNameInput = page.locator("input[name=\"lastName\"]");
+    this.emailInput = page.locator("input[name=\"email\"]");
+    this.passwordInput = page.locator("input[name=\"password\"]");
+    this.submitButton = page.locator("button[type=\"submit\"]");
     this.checkMark = page.locator("div.tcommon-check__mask");
     this.firstNameError = page
       .locator("tcommon-form-field")
@@ -22,8 +22,8 @@ export class RegistrationPage {
       .locator("tcommon-form-field")
       .filter({ hasText: "Email" })
       .locator("em.tcommon-form-field__message");
-    this.termsLink = page.locator('a[href="https://tractive.com/terms"]');
-    this.privacyLink = page.locator('a[href="https://tractive.com/privacy"]');
+    this.termsLink = page.locator("a[href=\"https://tractive.com/terms\"]");
+    this.privacyLink = page.locator("a[href=\"https://tractive.com/privacy\"]");
   }
 
   async navigateToSignup() {
