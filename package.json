@@ -4,9 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test",
+    "test:firefox": "npx playwright test  --browser=firefox --headed",
+    "test:chromium": "npx playwright test  --browser=chromium --headed",
+    "test:webkit": "npx playwright test  --browser=webkit --headed",
+    "test:reporter:htlml": "npx playwright test  --browser=firefox --headed --reporter=html",
+    "test:reporter:json": "npx playwright test  --browser=firefox --headed --reporter=json",
+    "test:reporter:allure": "npx playwright test  --browser=firefox --headed --reporter=allure-playwright",
+    "test:allure:generate": "allure generate ./allure-results -o ./allure-report",
+    "test:allure:open": "allure open ./allure-report"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "allure": "^0.0.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "allure-playwright": "^3.0.4"
+  }
 }
